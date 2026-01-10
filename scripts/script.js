@@ -19,7 +19,7 @@ const jobsData = [
     title: "Software Developer",
     company: "eSparkBiz",
     companyUrl:'https://www.esparkinfo.com/',
-    range: "July 2023 - Present",
+    range: "September 2023 - Present",
     html: ` <ul class="pr-6">
     <li>Developed robust APIs for complex data operations, improving system response times.</li>
     <li>Designed and optimized RESTful APIs with Spring Boot, significantly enhancing application efficiency and performance.
@@ -32,7 +32,7 @@ const jobsData = [
     title: "Software Developer Intern",
     company: "eSparkBiz",
     companyUrl:'https://www.esparkinfo.com/',
-    range: "January 2023 - June 2023",
+    range: "January 2023 - September 2023",
     html: `<ul class="pr-6">
     <li>Contributed to API development and bug fixing as a Spring Boot Developer, utilizing MySQL and MongoDB for database management.
     </li>
