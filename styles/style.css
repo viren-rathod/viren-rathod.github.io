@@ -44,7 +44,6 @@ html {
 body {
   background: var(--bg-primary) !important;
   color: var(--text-primary);
-  /* Increased duration for smoother theme switch */
   transition:
     background-color 0.5s ease,
     color 0.5s ease;
@@ -143,7 +142,6 @@ section {
 .card {
   background-color: var(--bg-secondary);
   box-shadow: none !important;
-  /* Smoother background transition for cards */
   transition:
     transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1),
     background-color 0.5s ease,
@@ -289,8 +287,7 @@ section {
   filter: invert(1);
 }
 
-/* --- Theme Toggle Animation --- */
-/* This class is added via JS when clicked */
+/* Theme Toggle */
 .theme-icon-active {
   animation: spin-swap 0.5s ease-in-out;
 }
@@ -381,14 +378,7 @@ section {
     margin-bottom: 30px;
   }
   .fLsUxN {
-    top: auto !important;
-    bottom: 0px !important;
-    height: 2px !important;
-    margin-left: 50px !important;
-    background: var(--accent-color) !important;
-    transition:
-      background-color 0.5s ease,
-      transform 0.25s;
+    display: none !important;
   }
   .column {
     flex-basis: fit-content !important;
