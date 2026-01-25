@@ -1,3 +1,39 @@
+const themeToggle = document.getElementById("theme-toggle");
+const htmlElement = document.documentElement;
+const themeIcon = themeToggle.querySelector("i");
+
+
+const updateIcon = (theme) => {
+  if (theme === "dark") {
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+  } else {
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+  }
+};
+
+const savedTheme = localStorage.getItem("theme") || "dark";
+htmlElement.setAttribute("data-theme", savedTheme);
+updateIcon(savedTheme);
+
+themeToggle.addEventListener("click", () => {
+  themeIcon.classList.add("theme-icon-active");
+
+  setTimeout(() => {
+    const currentTheme = htmlElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    htmlElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    updateIcon(newTheme);
+  }, 250);
+
+  setTimeout(() => {
+    themeIcon.classList.remove("theme-icon-active");
+  }, 500);
+});
+
 const navbarBurger = document.querySelector(".navbar-burger");
 const navbarMenu = document.querySelector(".navbar-menu");
 const navbarItems = document.querySelectorAll(".navbar-item");
@@ -8,10 +44,12 @@ navbarBurger.addEventListener("click", () => {
 });
 
 navbarItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    navbarBurger.classList.remove("is-active");
-    navbarMenu.classList.remove("is-active");
-  });
+  if (item.id !== "theme-toggle") {
+    item.addEventListener("click", () => {
+      navbarBurger.classList.remove("is-active");
+      navbarMenu.classList.remove("is-active");
+    });
+  }
 });
 
 const jobsData = [
@@ -40,7 +78,7 @@ const jobsData = [
     <li>Gained hands-on experience with version control systems, including Git and GitLab.
     </li>
   </ul>`,
-  }  
+  },
 ];
 
 let totalButton = 0;
@@ -86,7 +124,7 @@ function createDivider() {
   const divElement = document.createElement("div");
   divElement.classList.add("fLsUxN");
   divElement.style.cssText =
-    "position: absolute; top: 0px; left: 0px; z-index: 10; width: 2px; height: 42px; border-radius: 5px; background: #64ffda; transform: translateY(calc(0 * 42px)); transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;";
+    "position: absolute; top: 0px; left: 0px; z-index: 10; width: 2px; height: 42px; border-radius: 5px; background: var(--accent-color); transform: translateY(calc(0 * 42px)); transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, background-color 0.5s ease;";
   tabList.appendChild(divElement);
 }
 
