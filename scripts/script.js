@@ -2,7 +2,6 @@ const themeToggle = document.getElementById("theme-toggle");
 const htmlElement = document.documentElement;
 const themeIcon = themeToggle.querySelector("i");
 
-
 const updateIcon = (theme) => {
   if (theme === "dark") {
     themeIcon.classList.remove("fa-sun");
@@ -56,21 +55,21 @@ const jobsData = [
   {
     title: "Software Developer",
     company: "eSparkBiz",
-    companyUrl:'https://www.esparkinfo.com/',
+    companyUrl: "https://www.esparkinfo.com/",
     range: "September 2023 - Present",
-    html: ` <ul class="pr-6">
-    <li>Developed robust APIs for complex data operations, improving system response times.</li>
-    <li>Designed and optimized RESTful APIs with Spring Boot, significantly enhancing application efficiency and performance.
-    </li>
-    <li>Contributed as a full-stack developer to a Learning Management System (LMS), focusing on complex data handling for both backend and frontend.</li>
+    html: `<ul class="pr-6">
+    <li>Contributed as a full-stack developer to a Learning Management System (LMS), focusing on a Course Management Module, helping build features for creating courses, scheduling lessons, and managing exams.</li>
+    <li>Designed a multi-language data structure and implemented logic to avoid scheduling conflicts for trainers and resources.</li>
     <li>Created dynamic and responsive UI components using React, ensuring seamless data visualization and an excellent user experience.</li>
+    <li>Built dashboards using Highcharts to visualize and analyze large volumes of IoT sensor data, and developed APIs to support complex data operations.</li>
+    <li>Implemented HiveMQ Extension SDK with mTLS authentication using a custom CA and generated Kafka events for system integration.</li>
   </ul>`,
   },
   {
     title: "Software Developer Intern",
     company: "eSparkBiz",
-    companyUrl:'https://www.esparkinfo.com/',
-    range: "January 2023 - September 2023",
+    companyUrl: "https://www.esparkinfo.com/",
+    range: "January 2023 - August 2023",
     html: `<ul class="pr-6">
     <li>Contributed to API development and bug fixing as a Spring Boot Developer, utilizing MySQL and MongoDB for database management.
     </li>
